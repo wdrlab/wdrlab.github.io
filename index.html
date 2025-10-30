@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDR Lab — William Dieden Richter</title>
+  <meta name="description" content="Portfolio of William Dieden Richter — risk & model specialist. Analytical clarity + creative rigor.">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="WDR Lab — William Dieden Richter">
+  <meta property="og:description" content="Risk & model specialist. Analytical clarity + creative rigor.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.wdrlab.com/">
+  <meta property="og:image" content="https://www.wdrlab.com/og-image.jpg"> <!-- TODO: replace or remove -->
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="/favicon.ico">
+
+  <style>
+    :root {
+      --bg: #0b0c0e;
+      --fg: #e9eaec;
+      --muted: #b3b7c0;
+      --accent: #7da7ff; /* change if you like */
+      --card: #121317;
+      --stroke: #1c1e24;
+      --maxw: 980px;
+      --pad: 20px;
+      --radius: 12px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --fg: #111217;
+        --muted: #5b606b;
+        --accent: #335dff;
+        --card: #f6f7fb;
+        --stroke: #e6e8ef;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial;
+      background: var(--bg); color: var(--fg);
+      line-height: 1.55;
+    }
+    a { color: var(--fg); text-decoration: none; }
+    a.link { color: var(--accent); text-underline-offset: 3px; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+
+    /* NAV */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--stroke);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .brand { font-weight: 700; letter-spacing: .02em; }
+    .brand small { color: var(--muted); font-weight: 500; margin-left: .4rem; }
+    nav ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--muted); font-weight: 600; }
+    nav a:hover, nav a:focus { color: var(--fg); }
+
+    /* HERO */
+    .hero {
+      padding: 72px var(--pad) 24px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.05; margin: 8px 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .tag {
+      display: inline-block; padding: 6px 10px; border: 1px solid var(--stroke);
+      border-radius: 999px; color: var(--muted); font-weight: 600; font-size: 14px;
+    }
+    .lead { color: var(--muted); font-size: clamp(16px, 2.6vw, 18px); max-width: 60ch; }
+
+    /* SECTIONS */
+    section { padding: 48px 0; border-top: 1px solid var(--stroke); }
+    h2 { font-size: 22px; letter-spacing: .02em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 800px) {
+      .grid-2 { grid-template-columns: 1.2fr 1fr; align-items: start; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--stroke);
+      border-radius: var(--radius); padding: 18px;
+    }
+    .k {
+      font-weight: 700; color: var(--fg);
+    }
+    .muted { color: var(--muted); }
+
+    /* FOOTER */
+    footer { padding: 36px 0 64px; border-top: 1px solid var(--stroke); color: var(--muted); }
+
+    /* Buttons */
+    .btn {
+      display: inline-block; padding: 10px 14px; border-radius: 10px;
+      background: var(--fg); color: var(--bg); font-weight: 700; border: 1px solid var(--stroke);
+    }
+    .btn:hover { opacity: .9; }
+
+    /* Utilities */
+    .stack > * + * { margin-top: 10px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .pill { padding: 6px 10px; border: 1px solid var(--stroke); border-radius: 999px; color: var(--muted); font-weight: 600; font-size: 14px; }
+    .sep { height: 8px; }
+  </style>
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "William Dieden Richter",
+    "url": "https://www.wdrlab.com/",
+    "email": "mailto:william@wdrlab.com",
+    "jobTitle": "Risk & Model Specialist",
+    "affiliation": { "@type": "Organization", "name": "WDR Lab" },
+    "sameAs": ["https://www.linkedin.com/in/REPLACE-LINKEDIN"]  /* TODO */
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="wrap nav">
+      <div class="brand">WDR Lab <small>Portfolio</small></div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#strengths">Strengths</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#work">Selected Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="wrap hero">
+    <span class="tag">William Dieden Richter — WDR</span>
+    <h1>Analytical clarity,<br>creative rigor.</h1>
+    <p class="lead">Risk & model specialist focused on model validation, third-party model governance, and turning uncertainty into decisions. I blend quantitative depth with clear communication and well-designed systems.</p>
+    <div class="sep"></div>
+    <div class="row">
+      <a class="btn" href="#experience">View Experience</a>
+      <a class="link" href="#contact" aria-label="Skip to contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap grid grid-2">
+      <div class="card stack">
+        <h2>About</h2>
+        <p>I work at the intersection of quantitative analysis, governance, and communication. My recent focus: robust frameworks for <span class="k">third-party model</span> use, regulatory alignment (BIS / EBA), and model risk practices that are rigorous yet practical.</p>
+        <p>My philosophy is simple: disciplined thinking, intellectual honesty, and design that reduces friction. I call it the <span class="k">WDR way</span> — structure with just enough spontaneity to keep ideas alive.</p>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="muted">Location</div>
+          <div>Copenhagen, DK (EU-friendly)</div>
+        </div>
+        <div class="card">
+          <div class="muted">Currently</div>
+          <div>Risk/Model consulting • Speaking & writing on model governance</div>
+        </div>
+        <div class="card">
+          <div class="muted">Keywords</div>
+          <div class="row">
+            <span class="pill">Model Risk & Validation</span>
+            <span class="pill">Third-Party Models</span>
+            <span class="pill">Governance & Controls</span>
+            <span class="pill">Quant</span>
+            <span class="pill">Communication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS -->
+  <section id="strengths">
+    <div class="wrap">
+      <h2>Strengths</h2>
+      <div class="grid grid-3">
+        <div class="card stack">
+          <div class="k">Model Risk & Validation</div>
+          <div class="muted">Hands-on with validation workflows, documentation, and testing that stands up to scrutiny.</div>
+        </div>
+        <div class="card stack">
+          <div class="k">Third-Party Model Governance</div>
+          <div class="muted">Pragmatic frameworks for selecting, integrating, and monitoring external models.</div>
+        </div>
+        <div class="card stack">
+          <div class="k">Analytical Communication</div>
+          <div class="muted">Make complex ideas legible to execs and regulators without losing nuance.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="card stack">
+          <div class="k">Advisense AB — Risk Consultant</div>
+          <div class="muted">2022–Present • Copenhagen</div>
+          <ul>
+            <li>Model risk & validation across regulated environments.</li>
+            <li>Third-party model governance: policies, onboarding, performance monitoring.</li>
+            <li>Clarity-first communication and documentation for audits & regulators.</li>
+          </ul>
+        </div>
+
+        <!-- TODO: Add prior roles -->
+        <!--
+        <div class="card stack">
+          <div class="k">Previous Company — Role</div>
+          <div class="muted">Year–Year • City</div>
+          <ul>
+            <li>Impact bullet 1</li>
+            <li>Impact bullet 2</li>
+          </ul>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected Work</h2>
+      <div class="grid">
+        <div class="card stack">
+          <div class="k">Webinar — Third-Party Models in Finance (2025)</div>
+          <div class="muted">Definition, risks, regulatory angles (BIS/EBA), and practical governance.</div>
+          <!-- <a class="link" href="LINK-TO-WEBINAR" target="_blank" rel="noopener">Watch →</a> -->
+        </div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap grid grid-2">
+      <div class="card stack">
+        <h2>Contact</h2>
+        <p>For opportunities, collaborations, or a quick chat:</p>
+        <p><a class="link" href="mailto:william@wdrlab.com">william@wdrlab.com</a></p>
+        <p><a class="link" href="https://www.linkedin.com/in/REPLACE-LINKEDIN" target="_blank" rel="noopener">LinkedIn →</a></p>
+      </div>
+      <div class="card muted">
+        Tip: keep it one page. If you need depth, link out to a PDF CV or a Notion page later.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> WDR Lab — All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
